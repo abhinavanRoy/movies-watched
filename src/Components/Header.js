@@ -3,7 +3,7 @@ function Header(props) {
   const addMovie = "Add a Movie";
 
   return (
-    <header className=" flex p-4 pb-8 md:p-8 justify-between items-center ">
+    <header className=" flex p-4 pb-8 md:p-4 justify-between items-center ">
       <h1 className=" text-xl  md:text-2xl text-white font-poppins">
         {movieWatched}
       </h1>
