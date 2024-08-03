@@ -1,11 +1,12 @@
 import RowItem from "./RowItem";
+import CONSTANTS from "../Constants/Constants";
 
 function MovieCard(props) {
-  var movieText = "Movie";
-  var genreText = "Genre";
-  var watchedOnText = "Watched On";
-  var editText = "Edit";
-  var deleteText = "Delete";
+  var movieText = CONSTANTS.movie;
+  var genreText = CONSTANTS.genre;
+  var watchedOnText = CONSTANTS.watchedOn;
+  var editText = CONSTANTS.edit;
+  var deleteText = CONSTANTS.delete;
 
   return (
     <>
@@ -21,7 +22,7 @@ function MovieCard(props) {
         <div className="max-w-xs">
           <h1 className="overflow-hidden text-ellipsis whitespace-nowrap font-poppins font-semibold text-black">
             {movieText} <span>:</span>{" "}
-            <span className=" text-[#671FAF] font-medium">
+            <span className= { ` text-[${CONSTANTS.colors.purple}] font-medium `}>
               {props.movieData.movieName}
             </span>{" "}
           </h1>
@@ -30,21 +31,21 @@ function MovieCard(props) {
         <h1 className="font-poppins font-semibold text-black">
           {" "}
           {genreText} <span>:</span>{" "}
-          <span className=" text-[#671FAF] font-medium">
+          <span className={` text-[${CONSTANTS.colors.purple}] font-medium `}>
             {props.movieData.genre}
           </span>{" "}
         </h1>
         <h1 className="font-poppins font-semibold text-black">
           {watchedOnText} <span>:</span>{" "}
-          <span className=" text-[#671FAF] font-medium">
+          <span className={ ` text-[${CONSTANTS.colors.purple}] font-medium ` }>
             {props.movieData.watchedOn}
           </span>{" "}
         </h1>
-        <div className="flex gap-3 justify-center">
-          <button className="rounded-md shadow-md bg-[#671FAF] text-white font-poppins font-semibold py-1 px-3">
+        <div className="flex gap-5 justify-center">
+          <button className= { ` rounded-md shadow-md bg-[${CONSTANTS.colors.purple}] text-white font-poppins font-semibold py-1 px-3 `}>
             {editText}
           </button>
-          <button className="rounded-md shadow-md bg-[#671FAF] text-white font-poppins font-semibold py-1 px-3">
+          <button className= { ` rounded-md shadow-md bg-[${CONSTANTS.colors.purple}] text-white font-poppins font-semibold py-1 px-3 ` }>
             {deleteText}
           </button>
         </div>
